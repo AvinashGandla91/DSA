@@ -1,0 +1,36 @@
+//Linked list (CRT Day 2)
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node{
+int data;
+struct Node* next;
+};
+
+struct Node* CreateNode(int val)
+{
+struct Node* New_Node = (struct Node*)malloc(sizeof(struct Node));
+New_node -> data = val;
+New_node -> next = NULL;
+return New_node;
+}
+void insert_at_beginning(struct node** headref , int val) {
+struct Node* New_Node = CreateNode(val);
+New_Node -> next = headref;
+*headred = New_Node;
+}
+void insert_at_ending(struct node** headref , int val) {
+struct Node* New_Node = CreateNode(val);
+if(*headref == NULL) {
+*headref = New_Node;
+return ;
+}
+else {
+struct Node* current = *headref;
+while(current -> != NULL)
+{
+current = current -> next;
+}
+current -> next = New_Node;
+}
