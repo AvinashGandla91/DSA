@@ -1,1 +1,17 @@
-Stack
+>>>>Createing Stack<<<<<<
+
+#include<stdio.h>
+#include<stdlib.h>
+struct Stack{
+int top;
+int capacity;
+int* array;
+};
+struct stack(int capacity)
+{
+struct stack* stack=(struct stack*)malloc(sizeof(struct stack));
+stack->capacity=capacity;
+stack->top=-1;
+stack->array=(int *)malloc(sizeof(int)*stack->capacity);
+return stack;
+
